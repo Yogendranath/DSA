@@ -14,10 +14,12 @@ class Subsequence {
       return true;
     }
     al.add(arr[index]);
+    s+=arr[index];
     if(sub(index + 1, arr,s,sum, al, n)==true){
       return true;
     }
     al.remove(arr[index]);
+    s-=arr[index];
     if(sub(index + 1, arr,s,sum ,al, n)==true){
       return true;
     }
